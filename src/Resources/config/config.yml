@@ -19,12 +19,12 @@ parameters:
     bitbag_sylius_cms_plugin.form.type.media.validation_groups: "%bitbag_validation_group%"
     bitbag_sylius_cms_plugin.uploader.filesystem: bitbag_sylius_cms_plugin_media
 
-jms_serializer:
-    metadata:
-        directories:
-            bitbag-section:
-                namespace_prefix: "BitBag\\SyliusCmsPlugin"
-                path: "@BitBagSyliusCmsPlugin/Resources/config/serializer"
+#jms_serializer:
+#    metadata:
+#        directories:
+#            bitbag-section:
+#                namespace_prefix: "BitBag\\SyliusCmsPlugin"
+#                path: "@BitBagSyliusCmsPlugin/Resources/config/serializer"
 
 knp_gaufrette:
     adapters:
@@ -43,10 +43,9 @@ liip_imagine:
                 data_root:
                     - "%kernel.project_dir%/public"
 
-sylius_ui:
-    events:
-        sylius.admin.layout.javascripts:
-            blocks:
-                version_script:
-                    template: "@BitBagSyliusCmsPlugin/Asset/_cmsVersionScript.html.twig"
-                    priority: 30
+sylius_twig_hooks:
+    hooks:
+        'sylius_admin.base#javascripts':
+            cms_plugin:
+                template: "@BitBagSyliusCmsPlugin/Asset/_cmsVersionScript.html.twig"
+                priority: 30
