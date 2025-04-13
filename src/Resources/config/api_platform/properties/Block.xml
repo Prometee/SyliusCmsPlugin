@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<properties xmlns="https://api-platform.com/schema/metadata/properties-3.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="https://api-platform.com/schema/metadata/properties-3.0 https://api-platform.com/schema/metadata/properties-3.0.xsd"
+>
+    <property resource="%bitbag_sylius_cms_plugin.model.block.class%" name="id" identifier="true" writable="false" />
+    <property resource="%bitbag_sylius_cms_plugin.model.block.class%" name="code" writable="false" readable="true" />
+    <property resource="%bitbag_sylius_cms_plugin.model.block.class%" name="enabled" writable="false" readable="true" />
+    <property resource="%bitbag_sylius_cms_plugin.model.block.class%" name="sections" writable="false" readable="true" />
+    <property resource="%bitbag_sylius_cms_plugin.model.block.class%" name="products" writable="false" readable="true" />
+    <property resource="%bitbag_sylius_cms_plugin.model.block.class%" name="channels" writable="false" readable="true" />
+    <property resource="%bitbag_sylius_cms_plugin.model.block.class%" name="taxonomies" writable="false" readable="true" />
+</properties>

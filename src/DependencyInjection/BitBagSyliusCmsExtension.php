@@ -32,6 +32,13 @@ final class BitBagSyliusCmsExtension extends Extension implements PrependExtensi
     public function prepend(ContainerBuilder $container): void
     {
         $this->prependDoctrineMigrations($container);
+        $this->prependApiPlatformMapping($container);
+    }
+
+    private function prependApiPlatformMapping(ContainerBuilder $container): void
+    {
+        $path = __DIR__ . '/../Resources/config/api_platform';
+        $container->prependExtensionConfig('api_platform', ['mapping' => ['paths' => [$path]]]);
     }
 
     protected function getMigrationsNamespace(): string
